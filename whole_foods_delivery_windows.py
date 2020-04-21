@@ -9,7 +9,7 @@ import winsound
 
 
 def getWFSlot(productUrl):
-   driver = webdriver.Chrome()
+   driver = webdriver.Chrome('/Users/karenka/downloads/chromedriver')
    driver.get(productUrl)           
    html = driver.page_source
    soup = bs4.BeautifulSoup(html)
@@ -17,7 +17,7 @@ def getWFSlot(productUrl):
    no_open_slots = True
 
    duration = 1000
-   milliseconds freq = 440
+   freq = 440
 
    while no_open_slots:
       driver.refresh()
